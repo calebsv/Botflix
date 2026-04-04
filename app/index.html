@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotFlix | Seu streaming favorito</title>
+    <meta name="description"
+        content="BotFlix é a plataforma de streaming com um robô que oferece uma vasta seleção de filmes, séries e documentários para todos os gostos. Com uma interface intuitiva e recursos avançados, o BotFlix proporciona uma experiência de entretenimento personalizada e envolvente. Descubra novos títulos, crie listas de reprodução e aproveite o melhor do cinema e da televisão com o BotFlix.">
+    <meta name="author" content="Caleb lira">
+    <meta name="keywords"
+        content="BotFlix, streaming, filmes, séries, documentários, entretenimento, plataforma de streaming, cinema, televisão">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center">
+
+    <div class="flex flex-col items-center text-center px-4">
+
+        <img src="assets/botzinho.png" class="logo-robot w-24 mb-4 rounded-xl">
+        <h1 class="text-white text-4xl font-bold mb-2">BotFlix</h1>
+        <p class="text-gray-300 mb-6 font-bold">
+            Seu assistente pessoal para encontrar o filme
+            <span class="text-red-400">perfeito</span>.
+        </p>
+
+
+        <div id="botflix-card" class="bg-[#1a1a1a] p-6 rounded-2xl w-[420px] shadow-2xl">
+
+            <input id="mood" type="text" placeholder="Como você está se sentindo?"
+                class="w-full p-4 text-lg rounded-lg bg-[#2a2a2a] text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-red-500 transition focus:scale-[1.02]"  />
+
+            <p class="text-gray-400 text-sm mt-3 text-left">
+                Exemplos:
+                <br />
+                • Quero algo engraçado para assistir depois do trabalho.
+                <br />
+                • Algo romântico para um date.
+                <br />
+                • Um filme emocionante.
+            </p>
+
+            <button onclick="buscarFilme()" class="w-full mt-4 bg-red-600 text-white py-3 rounded-lg transition font-semibold btn-shine">
+                Encontrar
+            </button>
+
+            <div id="resultado"></div>
+
+        </div>
+
+        <div id="botflix-footer" class="bg-[#1a1a1a] mt-4 p-3 rounded-2xl w-[150px] flex items-center">
+        <footer class="font-bold text-white ">Desenvolvido por <a href="https://github.com/calebsv" target="_blank" class="text-red-600">Caleb Lira</a></footer>
+        </div>
+    </div>
+    <script src="botflix.js"></script>
+
+</body>
+
+</html>
